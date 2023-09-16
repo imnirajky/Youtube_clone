@@ -1,4 +1,5 @@
 import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 const Sidebar = () => {
     const showMenu = useSelector(store=>store.app.isMenuOpen);
@@ -6,12 +7,14 @@ const Sidebar = () => {
     if(!showMenu) return null // Early return pattern 
     
     return (
-        <div className="flex flex-col w-full p-2 shadow-lg shadow-pink-400">
+        <div className="flex flex-col w-52 p-2 shadow-lg shadow-pink-400 col-span-1">
             <div className="border-b border-gray-300 flex flex-col align-middle">
-                <button className="flex items-center font-semibold text-lg">
+               <Link to="/">
+               <button className="flex items-center font-semibold text-lg">
                     <img className="w-10 m-4" src="https://cdn-icons-png.flaticon.com/128/263/263115.png" alt="home" />
                     Home
                 </button>
+               </Link>
                 <button className="flex items-center font-semibold text-lg">
                     <img className="w-10  m-4" src="https://logowik.com/content/uploads/images/youtube-shorts5863.jpg" alt="shorts" />
                     Shorts

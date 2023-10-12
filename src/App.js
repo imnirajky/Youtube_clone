@@ -5,7 +5,7 @@ import {createBrowserRouter, RouterProvider} from 'react-router-dom';
 import store from './utils/store';
 import MainContainer from './components/MainContainer';
 import WatchPage from './components/WatchPage';
-
+import LiveChat from './components/LiveChat';
 
 const appRouter = createBrowserRouter([
   {

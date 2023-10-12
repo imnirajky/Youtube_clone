@@ -16,7 +16,7 @@ const Head = ()=>{
             setSearchSuggestion(searchResult[1]);
             console.log(searchSuggestion);
         }
-        const timeoutID = setTimeout(searchQuery(), 2000);
+        const timeoutID = setTimeout(searchQuery, 2000);
 
         return ()=>clearTimeout(timeoutID)
     }, [search]);
